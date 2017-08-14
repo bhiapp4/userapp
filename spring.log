@@ -1,0 +1,361 @@
+2017-08-10 11:48:27.517  INFO 14156 --- [main] com.jnit.app.UserappApplication          : Starting UserappApplication on DESKTOP-5OB6RPK with PID 14156 (C:\Users\appib\Mine\hibernate-ws\userapp\target\classes started by appib in C:\Users\appib\Mine\hibernate-ws\userapp)
+2017-08-10 11:48:27.519  INFO 14156 --- [main] com.jnit.app.UserappApplication          : No active profile set, falling back to default profiles: default
+2017-08-10 11:48:27.603  INFO 14156 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@636be97c: startup date [Thu Aug 10 11:48:27 CDT 2017]; root of context hierarchy
+2017-08-10 11:48:29.634  INFO 14156 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1fc46a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-10 11:48:30.070  INFO 14156 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-10 11:48:30.085  INFO 14156 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-10 11:48:30.086  INFO 14156 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-10 11:48:30.238  INFO 14156 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-10 11:48:30.242  INFO 14156 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2644 ms
+2017-08-10 11:48:30.403  INFO 14156 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 11:48:30.411  INFO 14156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 11:48:30.415  INFO 14156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 11:48:30.425  INFO 14156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 11:48:30.425  INFO 14156 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 11:48:31.218  INFO 14156 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:48:31.250  INFO 14156 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 11:48:31.348  INFO 14156 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 11:48:31.349  INFO 14156 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-10 11:48:31.354  INFO 14156 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-10 11:48:31.565  INFO 14156 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 11:48:31.728  INFO 14156 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-08-10 11:48:32.201  INFO 14156 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-10 11:48:32.288  INFO 14156 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:48:33.217  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<org.springframework.http.HttpStatus> com.jnit.app.controller.UserController.deleteUser(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:48:33.227  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.jnit.app.model.User> com.jnit.app.controller.UserController.getAllUsers() throws java.lang.Exception
+2017-08-10 11:48:33.227  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[PUT]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.updateUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:48:33.228  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.createUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:48:33.228  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[GET]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.getUserById(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:48:33.233  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-08-10 11:48:33.236  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-08-10 11:48:33.236  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-08-10 11:48:33.237  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-08-10 11:48:33.244  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 11:48:33.245  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 11:48:33.733  INFO 14156 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@636be97c: startup date [Thu Aug 10 11:48:27 CDT 2017]; root of context hierarchy
+2017-08-10 11:48:33.850  INFO 14156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:48:33.851  INFO 14156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:48:33.884  INFO 14156 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2017-08-10 11:48:33.939  INFO 14156 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:48:34.527  INFO 14156 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-10 11:48:34.561  INFO 14156 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-08-10 11:48:34.562  INFO 14156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-08-10 11:48:34.609  INFO 14156 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-08-10 11:48:34.640  INFO 14156 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-08-10 11:48:35.284  INFO 14156 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-10 11:48:35.292  INFO 14156 --- [main] com.jnit.app.UserappApplication          : Started UserappApplication in 8.246 seconds (JVM running for 9.118)
+2017-08-10 11:51:30.718  INFO 14156 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-08-10 11:51:30.718  INFO 14156 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@636be97c: startup date [Thu Aug 10 11:48:27 CDT 2017]; root of context hierarchy
+2017-08-10 11:51:30.728  INFO 14156 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-08-10 11:51:30.732  INFO 14156 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-08-10 11:51:30.758  INFO 14156 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:51:41.823  INFO 5832 --- [main] com.jnit.app.UserappApplication          : Starting UserappApplication on DESKTOP-5OB6RPK with PID 5832 (C:\Users\appib\Mine\hibernate-ws\userapp\target\classes started by appib in C:\Users\appib\Mine\hibernate-ws\userapp)
+2017-08-10 11:51:41.826  INFO 5832 --- [main] com.jnit.app.UserappApplication          : No active profile set, falling back to default profiles: default
+2017-08-10 11:51:41.885  INFO 5832 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@636be97c: startup date [Thu Aug 10 11:51:41 CDT 2017]; root of context hierarchy
+2017-08-10 11:51:43.913  INFO 5832 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54fd1f04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-10 11:51:44.370  INFO 5832 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-10 11:51:44.389  INFO 5832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-10 11:51:44.390  INFO 5832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-10 11:51:44.557  INFO 5832 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-10 11:51:44.563  INFO 5832 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2681 ms
+2017-08-10 11:51:44.822  INFO 5832 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 11:51:44.829  INFO 5832 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 11:51:44.830  INFO 5832 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 11:51:44.836  INFO 5832 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 11:51:44.836  INFO 5832 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 11:51:45.581  INFO 5832 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:51:45.604  INFO 5832 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 11:51:45.715  INFO 5832 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 11:51:45.718  INFO 5832 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-10 11:51:45.721  INFO 5832 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-10 11:51:45.873  INFO 5832 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 11:51:46.017  INFO 5832 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-08-10 11:51:46.997  INFO 5832 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-10 11:51:47.161  INFO 5832 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:51:49.000  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[GET]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.getUserById(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:51:49.009  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[PUT]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.updateUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:51:49.018  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<org.springframework.http.HttpStatus> com.jnit.app.controller.UserController.deleteUser(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:51:49.026  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.jnit.app.model.User> com.jnit.app.controller.UserController.getAllUsers() throws java.lang.Exception
+2017-08-10 11:51:49.027  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.createUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:51:49.036  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-08-10 11:51:49.041  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-08-10 11:51:49.042  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-08-10 11:51:49.043  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-08-10 11:51:49.058  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 11:51:49.058  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 11:51:49.621  INFO 5832 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@636be97c: startup date [Thu Aug 10 11:51:41 CDT 2017]; root of context hierarchy
+2017-08-10 11:51:49.725  INFO 5832 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:51:49.725  INFO 5832 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:51:49.742  INFO 5832 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2017-08-10 11:51:49.776  INFO 5832 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:51:50.226  INFO 5832 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-10 11:51:50.239  INFO 5832 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-08-10 11:51:50.240  INFO 5832 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-08-10 11:51:50.272  INFO 5832 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-08-10 11:51:50.288  INFO 5832 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-08-10 11:51:51.245  INFO 5832 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-10 11:51:51.358  INFO 5832 --- [main] com.jnit.app.UserappApplication          : Started UserappApplication in 9.924 seconds (JVM running for 10.702)
+2017-08-10 11:52:11.628  INFO 5832 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 11:52:11.635  INFO 5832 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 11:52:11.669  INFO 5832 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2017-08-10 11:52:11.734  INFO 5832 --- [http-nio-8080-exec-1] com.jnit.app.controller.UserController   : Execution get all users request...
+2017-08-10 11:52:11.805  INFO 5832 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-08-10 11:52:12.165  INFO 5832 --- [http-nio-8080-exec-1] com.jnit.app.controller.UserController   : Finished executuin get all users request...
+2017-08-10 11:54:16.460  INFO 5832 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-08-10 11:54:16.461  INFO 5832 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@636be97c: startup date [Thu Aug 10 11:51:41 CDT 2017]; root of context hierarchy
+2017-08-10 11:54:16.469  INFO 5832 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-08-10 11:54:16.471  INFO 5832 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-08-10 11:54:16.482  INFO 5832 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:55:05.960  INFO 5772 --- [main] com.jnit.app.UserappApplication          : Starting UserappApplication on DESKTOP-5OB6RPK with PID 5772 (C:\Users\appib\Mine\hibernate-ws\userapp\target\classes started by appib in C:\Users\appib\Mine\hibernate-ws\userapp)
+2017-08-10 11:55:05.963  INFO 5772 --- [main] com.jnit.app.UserappApplication          : No active profile set, falling back to default profiles: default
+2017-08-10 11:55:06.040  INFO 5772 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31368b99: startup date [Thu Aug 10 11:55:06 CDT 2017]; root of context hierarchy
+2017-08-10 11:55:08.279  INFO 5772 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$80e447] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-10 11:55:08.865  INFO 5772 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-10 11:55:08.882  INFO 5772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-10 11:55:08.883  INFO 5772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-10 11:55:09.064  INFO 5772 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-10 11:55:09.069  INFO 5772 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3032 ms
+2017-08-10 11:55:09.238  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 11:55:09.243  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 11:55:09.244  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 11:55:09.249  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 11:55:09.249  INFO 5772 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 11:55:10.049  INFO 5772 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:55:10.079  INFO 5772 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 11:55:10.213  INFO 5772 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 11:55:10.215  INFO 5772 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-10 11:55:10.224  INFO 5772 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-10 11:55:10.414  INFO 5772 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 11:55:10.543  INFO 5772 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-08-10 11:55:11.092  INFO 5772 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-10 11:55:11.166  INFO 5772 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:55:12.202  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.createUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:55:12.213  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[PUT]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.updateUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:55:12.213  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.jnit.app.model.User> com.jnit.app.controller.UserController.getAllUsers() throws java.lang.Exception
+2017-08-10 11:55:12.223  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<org.springframework.http.HttpStatus> com.jnit.app.controller.UserController.deleteUser(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:55:12.224  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[GET]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.getUserById(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:55:12.233  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-08-10 11:55:12.236  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-08-10 11:55:12.238  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-08-10 11:55:12.242  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-08-10 11:55:12.252  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 11:55:12.254  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 11:55:13.031  INFO 5772 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31368b99: startup date [Thu Aug 10 11:55:06 CDT 2017]; root of context hierarchy
+2017-08-10 11:55:13.254  INFO 5772 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:55:13.277  INFO 5772 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:55:13.338  INFO 5772 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2017-08-10 11:55:13.395  INFO 5772 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:55:14.110  INFO 5772 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-10 11:55:14.132  INFO 5772 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-08-10 11:55:14.133  INFO 5772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-08-10 11:55:14.167  INFO 5772 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-08-10 11:55:14.197  INFO 5772 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-08-10 11:55:14.910  INFO 5772 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-10 11:55:14.923  INFO 5772 --- [main] com.jnit.app.UserappApplication          : Started UserappApplication in 9.38 seconds (JVM running for 10.11)
+2017-08-10 11:55:25.396  INFO 5772 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-08-10 11:55:25.396  INFO 5772 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31368b99: startup date [Thu Aug 10 11:55:06 CDT 2017]; root of context hierarchy
+2017-08-10 11:55:25.402  INFO 5772 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-08-10 11:55:25.404  INFO 5772 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-08-10 11:55:25.409  INFO 5772 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:55:53.795  INFO 11168 --- [main] com.jnit.app.UserappApplication          : Starting UserappApplication on DESKTOP-5OB6RPK with PID 11168 (C:\Users\appib\Mine\hibernate-ws\userapp\target\classes started by appib in C:\Users\appib\Mine\hibernate-ws\userapp)
+2017-08-10 11:55:53.797  INFO 11168 --- [main] com.jnit.app.UserappApplication          : No active profile set, falling back to default profiles: default
+2017-08-10 11:55:53.880  INFO 11168 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31368b99: startup date [Thu Aug 10 11:55:53 CDT 2017]; root of context hierarchy
+2017-08-10 11:55:55.981  INFO 11168 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fc2e4596] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-10 11:55:56.475  INFO 11168 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-10 11:55:56.489  INFO 11168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-10 11:55:56.490  INFO 11168 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-10 11:55:56.653  INFO 11168 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-10 11:55:56.657  INFO 11168 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2781 ms
+2017-08-10 11:55:56.829  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 11:55:56.835  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 11:55:56.836  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 11:55:56.842  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 11:55:56.842  INFO 11168 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 11:55:57.643  INFO 11168 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:55:57.673  INFO 11168 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 11:55:57.763  INFO 11168 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 11:55:57.765  INFO 11168 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-10 11:55:57.772  INFO 11168 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-10 11:55:57.932  INFO 11168 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 11:55:58.052  INFO 11168 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-08-10 11:55:58.559  INFO 11168 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-10 11:55:58.638  INFO 11168 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:55:59.571  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.createUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:55:59.578  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[PUT]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.updateUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:55:59.579  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<org.springframework.http.HttpStatus> com.jnit.app.controller.UserController.deleteUser(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:55:59.579  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[GET]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.getUserById(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:55:59.580  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.jnit.app.model.User> com.jnit.app.controller.UserController.getAllUsers() throws java.lang.Exception
+2017-08-10 11:55:59.586  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-08-10 11:55:59.589  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-08-10 11:55:59.590  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-08-10 11:55:59.591  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-08-10 11:55:59.601  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 11:55:59.602  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 11:56:00.064  INFO 11168 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31368b99: startup date [Thu Aug 10 11:55:53 CDT 2017]; root of context hierarchy
+2017-08-10 11:56:00.157  INFO 11168 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:56:00.157  INFO 11168 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:56:00.188  INFO 11168 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2017-08-10 11:56:00.262  INFO 11168 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:56:00.863  INFO 11168 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-10 11:56:00.880  INFO 11168 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-08-10 11:56:00.881  INFO 11168 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-08-10 11:56:00.912  INFO 11168 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-08-10 11:56:00.931  INFO 11168 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-08-10 11:56:01.455  INFO 11168 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-10 11:56:01.463  INFO 11168 --- [main] com.jnit.app.UserappApplication          : Started UserappApplication in 8.122 seconds (JVM running for 8.84)
+2017-08-10 11:56:14.502  INFO 11168 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 11:56:14.502  INFO 11168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 11:56:14.568  INFO 11168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 60 ms
+2017-08-10 11:56:14.630  INFO 11168 --- [http-nio-8080-exec-1] com.jnit.app.controller.UserController   : Execution get all users request...
+2017-08-10 11:56:14.683  INFO 11168 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-08-10 11:56:14.851  INFO 11168 --- [http-nio-8080-exec-1] com.jnit.app.controller.UserController   : Finished executuin get all users request...
+2017-08-10 11:57:47.931  INFO 11168 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-08-10 11:57:47.932  INFO 11168 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31368b99: startup date [Thu Aug 10 11:55:53 CDT 2017]; root of context hierarchy
+2017-08-10 11:57:47.939  INFO 11168 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-08-10 11:57:47.941  INFO 11168 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-08-10 11:57:47.949  INFO 11168 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:57:57.432  INFO 14780 --- [main] com.jnit.app.UserappApplication          : Starting UserappApplication on DESKTOP-5OB6RPK with PID 14780 (C:\Users\appib\Mine\hibernate-ws\userapp\target\classes started by appib in C:\Users\appib\Mine\hibernate-ws\userapp)
+2017-08-10 11:57:57.436  INFO 14780 --- [main] com.jnit.app.UserappApplication          : No active profile set, falling back to default profiles: default
+2017-08-10 11:57:57.504  INFO 14780 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ac3c60d: startup date [Thu Aug 10 11:57:57 CDT 2017]; root of context hierarchy
+2017-08-10 11:57:59.372  INFO 14780 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d6f25181] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-10 11:57:59.898  INFO 14780 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-10 11:57:59.912  INFO 14780 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-10 11:57:59.913  INFO 14780 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-10 11:58:00.090  INFO 14780 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-10 11:58:00.094  INFO 14780 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2595 ms
+2017-08-10 11:58:00.268  INFO 14780 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 11:58:00.273  INFO 14780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 11:58:00.274  INFO 14780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 11:58:00.280  INFO 14780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 11:58:00.280  INFO 14780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 11:58:00.994  INFO 14780 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:58:01.014  INFO 14780 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 11:58:01.117  INFO 14780 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 11:58:01.119  INFO 14780 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-10 11:58:01.121  INFO 14780 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-10 11:58:01.324  INFO 14780 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 11:58:01.434  INFO 14780 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-08-10 11:58:01.914  INFO 14780 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-10 11:58:01.999  INFO 14780 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:58:02.841  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<org.springframework.http.HttpStatus> com.jnit.app.controller.UserController.deleteUser(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:58:02.849  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[GET]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.getUserById(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:58:02.849  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.jnit.app.model.User> com.jnit.app.controller.UserController.getAllUsers() throws java.lang.Exception
+2017-08-10 11:58:02.851  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.createUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:58:02.851  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[PUT]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.updateUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:58:02.859  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-08-10 11:58:02.862  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-08-10 11:58:02.863  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-08-10 11:58:02.868  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-08-10 11:58:02.878  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 11:58:02.878  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 11:58:03.402  INFO 14780 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ac3c60d: startup date [Thu Aug 10 11:57:57 CDT 2017]; root of context hierarchy
+2017-08-10 11:58:03.477  INFO 14780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:58:03.477  INFO 14780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:58:03.497  INFO 14780 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2017-08-10 11:58:03.529  INFO 14780 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:58:03.827  INFO 14780 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-10 11:58:03.845  INFO 14780 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-08-10 11:58:03.845  INFO 14780 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-08-10 11:58:03.871  INFO 14780 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-08-10 11:58:03.888  INFO 14780 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-08-10 11:58:04.408  INFO 14780 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-10 11:58:04.415  INFO 14780 --- [main] com.jnit.app.UserappApplication          : Started UserappApplication in 7.415 seconds (JVM running for 8.151)
+2017-08-10 11:58:07.054  INFO 14780 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 11:58:07.059  INFO 14780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 11:58:07.095  INFO 14780 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+2017-08-10 11:58:07.155  INFO 14780 --- [http-nio-8080-exec-1] com.jnit.app.controller.UserController   : Execution get all users request...
+2017-08-10 11:58:07.204  INFO 14780 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-08-10 11:58:07.419 DEBUG 14780 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        User as generatedAlias0 */ select
+            user0_.id as id1_0_,
+            user0_.city as city2_0_,
+            user0_.fName as fName3_0_,
+            user0_.lName as lName4_0_ 
+        from
+            User user0_
+2017-08-10 11:58:07.535  INFO 14780 --- [http-nio-8080-exec-1] com.jnit.app.controller.UserController   : Finished executuin get all users request...
+2017-08-10 11:59:01.500  INFO 14780 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-08-10 11:59:01.501  INFO 14780 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ac3c60d: startup date [Thu Aug 10 11:57:57 CDT 2017]; root of context hierarchy
+2017-08-10 11:59:01.508  INFO 14780 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-08-10 11:59:01.515  INFO 14780 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-08-10 11:59:01.518  INFO 14780 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:59:11.405  INFO 384 --- [main] com.jnit.app.UserappApplication          : Starting UserappApplication on DESKTOP-5OB6RPK with PID 384 (C:\Users\appib\Mine\hibernate-ws\userapp\target\classes started by appib in C:\Users\appib\Mine\hibernate-ws\userapp)
+2017-08-10 11:59:11.408  INFO 384 --- [main] com.jnit.app.UserappApplication          : No active profile set, falling back to default profiles: default
+2017-08-10 11:59:11.465  INFO 384 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ac3c60d: startup date [Thu Aug 10 11:59:11 CDT 2017]; root of context hierarchy
+2017-08-10 11:59:13.543  INFO 384 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$daf41f4c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-08-10 11:59:13.992  INFO 384 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-08-10 11:59:14.015  INFO 384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2017-08-10 11:59:14.017  INFO 384 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.15
+2017-08-10 11:59:14.240  INFO 384 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-08-10 11:59:14.244  INFO 384 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2781 ms
+2017-08-10 11:59:14.389  INFO 384 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-08-10 11:59:14.395  INFO 384 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-08-10 11:59:14.395  INFO 384 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-08-10 11:59:14.401  INFO 384 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-08-10 11:59:14.401  INFO 384 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-08-10 11:59:15.196  INFO 384 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:59:15.228  INFO 384 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-08-10 11:59:15.338  INFO 384 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-08-10 11:59:15.340  INFO 384 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-08-10 11:59:15.349  INFO 384 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-08-10 11:59:15.509  INFO 384 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-08-10 11:59:15.628  INFO 384 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-08-10 11:59:16.070  INFO 384 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-08-10 11:59:16.147  INFO 384 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-08-10 11:59:17.085  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[GET]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.getUserById(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:59:17.095  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/{userId}],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<org.springframework.http.HttpStatus> com.jnit.app.controller.UserController.deleteUser(java.lang.Long) throws java.lang.Exception
+2017-08-10 11:59:17.095  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[PUT]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.updateUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:59:17.101  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.util.List<com.jnit.app.model.User> com.jnit.app.controller.UserController.getAllUsers() throws java.lang.Exception
+2017-08-10 11:59:17.101  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[POST]}" onto public com.jnit.app.model.User com.jnit.app.controller.UserController.createUser(com.jnit.app.model.User) throws java.lang.Exception
+2017-08-10 11:59:17.108  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2017-08-10 11:59:17.111  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2017-08-10 11:59:17.112  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2017-08-10 11:59:17.113  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2017-08-10 11:59:17.123  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-08-10 11:59:17.124  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-08-10 11:59:17.530  INFO 384 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ac3c60d: startup date [Thu Aug 10 11:59:11 CDT 2017]; root of context hierarchy
+2017-08-10 11:59:17.658  INFO 384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:59:17.658  INFO 384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:59:17.715  INFO 384 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in restExceptionHandler
+2017-08-10 11:59:17.745  INFO 384 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-08-10 11:59:18.069  INFO 384 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-08-10 11:59:18.088  INFO 384 --- [main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2017-08-10 11:59:18.089  INFO 384 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2017-08-10 11:59:18.119  INFO 384 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2017-08-10 11:59:18.136  INFO 384 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2017-08-10 11:59:18.509  INFO 384 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-08-10 11:59:18.515  INFO 384 --- [main] com.jnit.app.UserappApplication          : Started UserappApplication in 7.536 seconds (JVM running for 8.268)
+2017-08-10 11:59:26.749  INFO 384 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-08-10 11:59:26.758  INFO 384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-08-10 11:59:26.825  INFO 384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 60 ms
+2017-08-10 11:59:26.910 DEBUG 384 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        user0_.id as id1_0_0_,
+        user0_.city as city2_0_0_,
+        user0_.fName as fName3_0_0_,
+        user0_.lName as lName4_0_0_ 
+    from
+        User user0_ 
+    where
+        user0_.id=?
+2017-08-10 11:59:26.938 TRACE 384 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [110]
+2017-08-10 12:33:03.071  INFO 384 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-08-10 12:33:03.073  INFO 384 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ac3c60d: startup date [Thu Aug 10 11:59:11 CDT 2017]; root of context hierarchy
+2017-08-10 12:33:03.085  INFO 384 --- [RMI TCP Connection(2)-127.0.0.1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2017-08-10 12:33:03.088  INFO 384 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-08-10 12:33:03.092  INFO 384 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'

@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +26,8 @@ import com.jnit.app.service.UserService;
 @RestController
 @RequestMapping("users")
 public class UserController {
+	
+	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
 	@Autowired
 	private UserService userService;
@@ -46,7 +50,11 @@ public class UserController {
 
 	@GetMapping
 	public List<User> getAllUsers() throws Exception {
-		return userService.getAllUsers();
+		logger.info("Execution get all users request...");
+		List<User>users = userService.getAllUsers();
+		logger.info("Finished executuin get all users request...");
+		return users;
+		
 	}
 	
 	@GetMapping("/{userId}")
