@@ -22,6 +22,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jnit.app.model.User;
 import com.jnit.app.service.UserService;
 
+/**
+ * @author appib
+ *
+ */
 @CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("users")
